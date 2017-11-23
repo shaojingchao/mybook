@@ -1,0 +1,14 @@
+{
+  "name": "wowbook",
+  "homepage": "https://github.com/yapro/wowbook",
+  "_release": "294eafff2e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "294eafff2e2542c554133269650338061af6e992"
+  },
+  "_source": "git://github.com/yapro/wowbook.git",
+  "_target": "*",
+  "_originalSource": "yapro/wowbook",
+  "_direct": true
+}
