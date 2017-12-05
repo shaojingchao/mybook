@@ -258,14 +258,15 @@ bookConfig.OpenWindow = "Blank";
 bookConfig.showLinkHint = "No";
 // bookConfig.googleAnalyticsID = "";
 bookConfig.languageSetting = "Chinese";
-bookConfig.UIBaseURL = "./";
+bookConfig.UIBaseURL = "./images/fjzkb/";
 bookConfig.totalPageCount = window.totalPageCount != null ? totalPageCount : console.error('未定义总页数');
 bookConfig.largePageWidth = "612";
 bookConfig.largePageHeight = "858";
 bookConfig.bookTitle = "电子书";
-bookConfig.normalPath = "files/normal/";
-bookConfig.largePath = "files/normal/";
-bookConfig.thumbPath = "files/small/";
+bookConfig.normalPath = imagePath + "normal/";
+bookConfig.largePath = imagePath + "normal/";
+bookConfig.thumbPath = imagePath + "small/";
+bookConfig.fileNameFormat = "ch-(*)";
 bookConfig.productName = "";
 var language = [{
 	"language": "Chinese",

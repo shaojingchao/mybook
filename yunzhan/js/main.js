@@ -6271,6 +6271,7 @@ var transformCSS = function (b, c) {
 
  getPageDir =
 	function (b, c, d) {
+ 	console.log(b,c,d)
 		if (0 >= b || void 0 != d && b > d)return "";
 		if (bookConfig.getPageURL) {
 			var f = 0;
@@ -6314,6 +6315,13 @@ var transformCSS = function (b, c) {
 	}, fillImageAfterLoaded = function (b, c, d) {
 	if (b && c) {
 		var f = getPageDir(b, c, originTotalPageCount);
+		
+		/*自定义文件名格式*/
+		var splitF = f.split('.');
+		if(splitF.length && splitF[0] != ''){
+			f = splitF[0].replace(/(\d+)$/,bookConfig.fileNameFormat.replace('*',"$1")) + '.' + splitF[1];
+		};
+		console.log('f - formatted',f)
 		fillImageOrNot(f, b) ? -1 < f.indexOf(".js") ? global[decodeDatabasePrefix(c) + b] && "string" == typeof global[decodeDatabasePrefix(c) + b] ? d && d(dataBase64Str(b, c)) : loadJavascript(f, function (f) {
 						d && d(dataBase64Str(b,
 							c, f))
@@ -33389,6 +33397,7 @@ var BookPage = Class({
 				}.bind(this);
 				this.fullContent = !1;
 				this.imageURL = d;
+				console.log(b);
 				fillImageAfterLoaded(b, "normal", f)
 			}
 		}
